@@ -1,13 +1,26 @@
 from typing import Dict
 import json
+from typing import Tuple
 
 
-def triangle_zhonxin(a, b, c):
-    """ Returns the calculated center of gravity
-        s of the triangle, in the form of tuple"""
-    x = round((a[0] + b[0] + c[0]) / 3)     # x1 + x2 + x3
-    y = round((a[1] + b[1] + c[1]) / 3)     # y1 + y2 + y3
-    s = (x, y)      # class <tuple>
+def triangle_zhonxin(
+    a: Tuple[int, int],
+    b: Tuple[int, int],
+    c: Tuple[int, int]
+) -> Tuple[int, int]:
+    """Calculates the center of gravity of a triangle.
+
+    Parameters:
+    a (tuple): Coordinates of point A as (x, y).
+    b (tuple): Coordinates of point B as (x, y).
+    c (tuple): Coordinates of point C as (x, y).
+
+    Returns:
+    tuple: Coordinates of the center of gravity as (x, y).
+    """
+    x = round((a[0] + b[0] + c[0]) / 3)  # x1 + x2 + x3
+    y = round((a[1] + b[1] + c[1]) / 3)  # y1 + y2 + y3
+    s = (x, y)  # class <tuple>
     return s
 
 

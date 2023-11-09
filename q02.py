@@ -23,7 +23,7 @@ ave = total / len(employee_list) if len(employee_list) > 0 else 0
 round(ave)
 
 for employee in employee_list:
-    print(f"員工{employee['eName']:<6}的薪資為 {employee['eSalary']:>7,}")
+    print(f"員工{employee['eName']:<6}的薪資為{employee['eSalary']:>7,}")
 print("-" * 30)
 print(f"合計薪資 : {total:>15,}")
 print(f"平均薪資 : {ave:>18,.2f}")
